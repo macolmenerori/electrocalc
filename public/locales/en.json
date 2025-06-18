@@ -1,3 +1,9 @@
 {
-  "title": "ElectroCalc"
+  "title": "ElectroCalc",
+  "components": {
+    "navbar": {
+      "changeLanguage": "Change language",
+      "changeTheme": "Change light/dark theme"
+    }
+  }
 }
