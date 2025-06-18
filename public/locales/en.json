@@ -1,9 +1,10 @@
 {
-  "title": "ElectroCalc",
   "components": {
     "navbar": {
       "changeLanguage": "Change language",
       "changeTheme": "Change light/dark theme"
     }
-  }
+  },
+  "description": "Electricity consumption cost calculator, taxes included.",
+  "title": "ElectroCalc"
 }

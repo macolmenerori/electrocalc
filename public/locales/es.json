@@ -1,9 +1,10 @@
 {
-  "title": "ElectroCalc",
   "components": {
     "navbar": {
       "changeLanguage": "Cambiar idioma",
       "changeTheme": "Cambiar tema claro/oscuro"
     }
-  }
+  },
+  "description": "Calculadora de precio de la luz, impuestos incluídos.",
+  "title": "ElectroCalc"
 }
