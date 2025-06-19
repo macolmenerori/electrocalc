@@ -1,5 +1,8 @@
 {
   "components": {
+    "footer": {
+      "gitHubProject": "Echa un ojo a este proyecto en GitHub"
+    },
     "inputComponent": {
       "calculate": "Calcular",
       "errors": {
