@@ -38,6 +38,18 @@ i18n.use(initReactI18next).init({
   }
 });
 
+// Mock HTMLFormElement.prototype.requestSubmit if not available
+if (!HTMLFormElement.prototype.requestSubmit) {
+  HTMLFormElement.prototype.requestSubmit = function (submitter) {
+    if (submitter) {
+      // eslint-disable-next-line testing-library/no-node-access
+      submitter.click();
+    } else {
+      this.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    }
+  };
+}
+
 interface ExtendedRenderOptions {
   theme?: 'light' | 'dark';
   lng?: string; // Allow overriding language for specific tests
