@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Stack, Typography } from '@mui/material';
 
-export default function HeaderComponent() {
+export function HeaderComponent() {
   const { t } = useTranslation();
   return (
     <Stack spacing={2} marginBottom={4}>

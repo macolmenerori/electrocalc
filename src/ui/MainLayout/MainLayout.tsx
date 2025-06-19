@@ -1,6 +1,8 @@
 import { Stack } from '@mui/material';
 
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
+import { CalculatorLayout } from '../CalculatorLayout/CalculatorLayout';
+
+import { HeaderComponent } from '@/components/HeaderComponent/HeaderComponent';
 import { Navbar } from '@/components/Navbar/Navbar';
 
 export function MainLayout() {
@@ -11,6 +13,7 @@ export function MainLayout() {
       </header>
       <main>
         <HeaderComponent />
+        <CalculatorLayout />
       </main>
     </Stack>
   );

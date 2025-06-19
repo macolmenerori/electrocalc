@@ -3,6 +3,11 @@
     "navbar": {
       "changeLanguage": "Cambiar idioma",
       "changeTheme": "Cambiar tema claro/oscuro"
+    },
+    "inputComponent": {
+      "labelPower": "Potencia",
+      "labelPrice": "Precio por kWh",
+      "calculate": "Calcular"
     }
   },
   "description": "Calculadora de precio de la luz, impuestos incluídos.",

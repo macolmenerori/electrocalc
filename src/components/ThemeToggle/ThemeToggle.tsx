@@ -18,5 +18,3 @@ export function ThemeToggle() {
     </Tooltip>
   );
 }
-
-export default ThemeToggle;

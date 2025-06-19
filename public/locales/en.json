@@ -3,6 +3,11 @@
     "navbar": {
       "changeLanguage": "Change language",
       "changeTheme": "Change light/dark theme"
+    },
+    "inputComponent": {
+      "labelPower": "Power",
+      "labelPrice": "Price per kWh",
+      "calculate": "Calculate"
     }
   },
   "description": "Electricity consumption cost calculator, taxes included.",
