@@ -7,7 +7,17 @@
     "inputComponent": {
       "labelPower": "Power",
       "labelPrice": "Price per kWh",
-      "calculate": "Calculate"
+      "calculate": "Calculate",
+      "errors": {
+        "powerRequired": "Power is required",
+        "powerInvalid": "Power must be a number",
+        "powerMin": "Power must be grater than 0",
+        "powerMax": "Power must be lower than 1000000",
+        "priceRequired": "Price per kWh is required",
+        "priceInvalid": "Price per kWh must be a number",
+        "priceMin": "Price per kWh must be greater than 0.01",
+        "priceMax": "Price per kWh must be lower than 100"
+      }
     }
   },
   "description": "Electricity consumption cost calculator, taxes included.",

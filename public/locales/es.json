@@ -7,7 +7,17 @@
     "inputComponent": {
       "labelPower": "Potencia",
       "labelPrice": "Precio por kWh",
-      "calculate": "Calcular"
+      "calculate": "Calcular",
+      "errors": {
+        "powerRequired": "Potencia requerida",
+        "powerInvalid": "La potencia debe ser un número",
+        "powerMin": "La potencia debe ser mayor que 1",
+        "powerMax": "La potencia debe ser menor que 1000000",
+        "priceRequired": "Precio requerido",
+        "priceInvalid": "El precio debe ser un número",
+        "priceMin": "El precio debe ser mayor que 0.01",
+        "priceMax": "El precio debe ser menor que 100"
+      }
     }
   },
   "description": "Calculadora de precio de la luz, impuestos incluídos.",
