@@ -17,7 +17,7 @@ describe('Navbar', () => {
 
   it('renders the title correctly', () => {
     render(<Navbar />);
-    expect(screen.getByText('ElectroCalc')).toBeInTheDocument();
+    expect(screen.getByText('Electrocalc')).toBeInTheDocument();
   });
 
   it('renders the language switcher and theme toggle components in the navbar', () => {

@@ -1,25 +1,35 @@
 {
   "components": {
+    "inputComponent": {
+      "calculate": "Calculate",
+      "errors": {
+        "powerInvalid": "Power must be a number",
+        "powerMax": "Power must be lower than 1000000",
+        "powerMin": "Power must be grater than 0",
+        "powerRequired": "Power is required",
+        "priceInvalid": "Price per kWh must be a number",
+        "priceMax": "Price per kWh must be lower than 100",
+        "priceMin": "Price per kWh must be greater than 0.01",
+        "priceRequired": "Price per kWh is required"
+      },
+      "labelPower": "Power",
+      "labelPrice": "Price per kWh"
+    },
     "navbar": {
       "changeLanguage": "Change language",
       "changeTheme": "Change light/dark theme"
     },
-    "inputComponent": {
-      "labelPower": "Power",
-      "labelPrice": "Price per kWh",
-      "calculate": "Calculate",
-      "errors": {
-        "powerRequired": "Power is required",
-        "powerInvalid": "Power must be a number",
-        "powerMin": "Power must be grater than 0",
-        "powerMax": "Power must be lower than 1000000",
-        "priceRequired": "Price per kWh is required",
-        "priceInvalid": "Price per kWh must be a number",
-        "priceMin": "Price per kWh must be greater than 0.01",
-        "priceMax": "Price per kWh must be lower than 100"
+    "resultComponent": {
+      "ariaTable": "Result table",
+      "tableLabels": {
+        "cost": "Cost",
+        "day": "Day",
+        "hour": "Hour",
+        "hours": "Hours",
+        "time": "Time"
       }
     }
   },
   "description": "Electricity consumption cost calculator, taxes included.",
-  "title": "ElectroCalc"
+  "title": "Electrocalc"
 }

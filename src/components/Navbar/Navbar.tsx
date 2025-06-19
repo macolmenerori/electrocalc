@@ -11,7 +11,7 @@ export function Navbar() {
         <Stack direction="row" spacing={1}>
           <ElectricBoltIcon />
           <Typography textAlign="center" justifySelf="center" color="textSecondary" variant="h5">
-            ElectroCalc
+            Electrocalc
           </Typography>
         </Stack>
 

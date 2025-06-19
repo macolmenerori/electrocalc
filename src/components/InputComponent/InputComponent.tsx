@@ -79,6 +79,7 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
                     </Typography>
                   </InputAdornment>
                 }
+                sx={{ backgroundColor: 'background.paper', maxWidth: 150 }}
               />
             )}
           />
@@ -110,13 +111,19 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
                     </Typography>
                   </InputAdornment>
                 }
+                sx={{ backgroundColor: 'background.paper', maxWidth: 150 }}
               />
             )}
           />
           {errors.price && <FormHelperText error>{t(errors.price.message!)}</FormHelperText>}
         </Stack>
       </Stack>
-      <Button variant="outlined" type="submit" disabled={isSubmitting}>
+      <Button
+        variant="outlined"
+        type="submit"
+        disabled={isSubmitting}
+        sx={{ backgroundColor: 'background.paper' }}
+      >
         <Typography textTransform="uppercase">
           {t('components.inputComponent.calculate')}
         </Typography>
