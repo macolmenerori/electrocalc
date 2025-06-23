@@ -73,7 +73,7 @@
     "postcss": "^8.5.5",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.2.3",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.14",
     "ts-jest": "^29.4.0",
