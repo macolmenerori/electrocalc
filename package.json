@@ -20,7 +20,7 @@
     "test": "jest",
     "start": "webpack serve --port 3000",
     "types": "tsc --noEmit",
-    "verify": "pnpm lint && pnpm prettify && pnpm types && pnpm test && pnpm audit && pnpm build",
+    "verify": "pnpm lint && pnpm prettify && pnpm types && pnpm test && pnpm audit --prod && pnpm build",
     "gitleaks": "sh scripts/gitleaks.sh"
   },
   "dependencies": {
@@ -85,8 +85,5 @@
     "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
-  },
-  "resolutions": {
-    "on-headers": "^1.1.0"
   }
 }
