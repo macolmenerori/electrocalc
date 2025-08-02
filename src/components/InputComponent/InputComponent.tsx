@@ -20,7 +20,7 @@ interface InputComponentProps {
   setHourlyResult: (result: number | undefined) => void;
 }
 
-type FormData = z.infer<typeof formSchema>;
+type FormInput = z.input<typeof formSchema>;
 
 export function InputComponent({ setHourlyResult }: InputComponentProps) {
   const { t } = useTranslation();
@@ -29,17 +29,19 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
     control,
     handleSubmit,
     formState: { errors, isSubmitting }
-  } = useForm<FormData>({
+  } = useForm<FormInput>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      power: undefined,
-      price: undefined
+      power: '',
+      price: ''
     }
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: FormInput) => {
+    // Parse and validate the data using the schema
+    const parsedData = formSchema.parse(data);
     // Calculate hourly result (power * price)
-    const result = (data.power / 1000) * data.price;
+    const result = (parsedData.power / 1000) * parsedData.price;
     setHourlyResult(result);
   };
 
