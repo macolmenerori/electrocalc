@@ -3,16 +3,20 @@ import { z } from 'zod';
 export const formSchema = z.object({
   power: z.coerce
     .number({
-      required_error: 'components.inputComponent.errors.powerRequired',
-      invalid_type_error: 'components.inputComponent.errors.powerInvalid'
+      error: (issue) =>
+        issue.input === undefined
+          ? 'components.inputComponent.errors.powerRequired'
+          : 'components.inputComponent.errors.powerInvalid'
     })
-    .min(1, 'components.inputComponent.errors.powerMin')
-    .max(1000000, 'components.inputComponent.errors.powerMax'),
+    .min(1, { error: 'components.inputComponent.errors.powerMin' })
+    .max(1000000, { error: 'components.inputComponent.errors.powerMax' }),
   price: z.coerce
     .number({
-      required_error: 'components.inputComponent.errors.priceRequired',
-      invalid_type_error: 'components.inputComponent.errors.priceInvalid'
+      error: (issue) =>
+        issue.input === undefined
+          ? 'components.inputComponent.errors.priceRequired'
+          : 'components.inputComponent.errors.priceInvalid'
     })
-    .min(0.01, 'components.inputComponent.errors.priceMin')
-    .max(100, 'components.inputComponent.errors.priceMax')
+    .min(0.01, { error: 'components.inputComponent.errors.priceMin' })
+    .max(100, { error: 'components.inputComponent.errors.priceMax' })
 });
