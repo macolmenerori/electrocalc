@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
+import userEvent from '@testing-library/user-event';
+
 import { ThemeToggle } from './ThemeToggle';
 
-import { fireEvent, render, screen } from '@/test/setupTests';
+import { render, screen } from '@/test/setupTests';
 import { useTheme } from '@/ui/theme/ThemeContext';
 
 // Mock the modules
@@ -50,11 +52,12 @@ describe('ThemeToggle', () => {
     expect(screen.queryByTestId('dark-icon')).not.toBeInTheDocument();
   });
 
-  test('calls toggleTheme when button is clicked', () => {
+  test('calls toggleTheme when button is clicked', async () => {
     (useTheme as jest.Mock).mockReturnValue({ mode: 'light', toggleTheme: mockToggleTheme });
     render(<ThemeToggle />);
 
-    fireEvent.click(screen.getByRole('button'));
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button'));
     expect(mockToggleTheme).toHaveBeenCalledTimes(1);
   });
 });
