@@ -30,8 +30,8 @@ importers:
         specifier: ^7.3.2
         version: 7.3.2(@types/react@19.1.12)(styled-components@6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1))
       i18next:
-        specifier: ^25.5.0
-        version: 25.5.0(typescript@5.9.2)
+        specifier: ^25.5.2
+        version: 25.5.2(typescript@5.9.2)
       i18next-browser-languagedetector:
         specifier: ^8.2.0
         version: 8.2.0
@@ -46,7 +46,7 @@ importers:
         version: 7.62.0(react@19.1.1)
       react-i18next:
         specifier: ^15.7.3
-        version: 15.7.3(i18next@25.5.0(typescript@5.9.2))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
+        version: 15.7.3(i18next@25.5.2(typescript@5.9.2))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
       styled-components:
         specifier: ^6.1.19
         version: 6.1.19(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -2928,8 +2928,8 @@ packages:
   i18next-browser-languagedetector@8.2.0:
     resolution: {integrity: sha512-P+3zEKLnOF0qmiesW383vsLdtQVyKtCNA9cjSoKCppTKPQVfKd2W8hbVo5ZhNJKDqeM7BOcvNoKJOjpHh4Js9g==}
 
-  i18next@25.5.0:
-    resolution: {integrity: sha512-Mm2CgIq0revRFbBvfzqW9kDw1r44M4VDWC+YNRx9vTo5bU/iogSdEAC2HEonDA4czEce/iSbAkK90Tw7UrRZKA==}
+  i18next@25.5.2:
+    resolution: {integrity: sha512-lW8Zeh37i/o0zVr+NoCHfNnfvVw+M6FQbRp36ZZ/NyHDJ3NJVpp2HhAUyU9WafL5AssymNoOjMRB48mmx2P6Hw==}
     peerDependencies:
       typescript: ^5
     peerDependenciesMeta:
@@ -6217,7 +6217,7 @@ snapshots:
 
   '@mui/private-theming@7.3.2(@types/react@19.1.12)(react@19.1.1)':
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       '@mui/utils': 7.3.2(@types/react@19.1.12)(react@19.1.1)
       prop-types: 15.8.1
       react: 19.1.1
@@ -6237,7 +6237,7 @@ snapshots:
 
   '@mui/styled-engine@7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
       '@emotion/sheet': 1.4.0
@@ -6250,7 +6250,7 @@ snapshots:
 
   '@mui/system@7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1)':
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       '@mui/private-theming': 7.3.2(@types/react@19.1.12)(react@19.1.1)
       '@mui/styled-engine': 7.3.2(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.12)(react@19.1.1))(@types/react@19.1.12)(react@19.1.1))(react@19.1.1)
       '@mui/types': 7.4.6(@types/react@19.1.12)
@@ -6266,13 +6266,13 @@ snapshots:
 
   '@mui/types@7.4.6(@types/react@19.1.12)':
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
     optionalDependencies:
       '@types/react': 19.1.12
 
   '@mui/utils@7.3.2(@types/react@19.1.12)(react@19.1.1)':
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       '@mui/types': 7.4.6(@types/react@19.1.12)
       '@types/prop-types': 15.7.15
       clsx: 2.1.1
@@ -7056,7 +7056,7 @@ snapshots:
 
   babel-plugin-macros@3.1.0:
     dependencies:
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.4
       cosmiconfig: 7.1.0
       resolve: 1.22.10
 
@@ -7598,7 +7598,7 @@ snapshots:
 
   dom-helpers@5.2.1:
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       csstype: 3.1.3
 
   dom-serializer@1.4.1:
@@ -8369,9 +8369,9 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.27.6
 
-  i18next@25.5.0(typescript@5.9.2):
+  i18next@25.5.2(typescript@5.9.2):
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
     optionalDependencies:
       typescript: 5.9.2
 
@@ -9932,11 +9932,11 @@ snapshots:
     dependencies:
       react: 19.1.1
 
-  react-i18next@15.7.3(i18next@25.5.0(typescript@5.9.2))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2):
+  react-i18next@15.7.3(i18next@25.5.2(typescript@5.9.2))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.2):
     dependencies:
       '@babel/runtime': 7.28.3
       html-parse-stringify: 3.0.1
-      i18next: 25.5.0(typescript@5.9.2)
+      i18next: 25.5.2(typescript@5.9.2)
       react: 19.1.1
     optionalDependencies:
       react-dom: 19.1.1(react@19.1.1)
@@ -9952,7 +9952,7 @@ snapshots:
 
   react-transition-group@4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
-      '@babel/runtime': 7.28.3
+      '@babel/runtime': 7.28.4
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
