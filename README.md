@@ -16,7 +16,7 @@ Try it out [here](https://electrocalc.miguelangelcolmenero.es/)
 
 ### Requirements
 
-- Node JS `>=22.11.0`
+- Node JS `>=24.0.0`
 - [PNPM](https://pnpm.io/installation) `>=10.12.1`
 
 ### Run
