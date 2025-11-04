@@ -24,7 +24,7 @@ This is **electrocalc**, a React-based web application for calculating electrici
 
 ### Requirements
 
-- Node.js >= 22.11.0
+- Node.js >= 24.0.0
 - PNPM >= 10.12.1 (package manager)
 
 ## Architecture
