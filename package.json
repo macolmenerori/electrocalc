@@ -1,6 +1,6 @@
 {
   "name": "electrocalc",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Electricity consumption cost calculator",
   "engines": {
     "node": ">=24.0.0"
@@ -8,17 +8,18 @@
   "type": "module",
   "author": "macolmenerori",
   "license": "MIT",
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.28.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/macolmenerori/electrocalc"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.cjs",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "prettify": "prettier -w --log-level=silent src/",
     "lint": "eslint --fix ./src/",
     "test": "jest",
-    "start": "webpack serve --port 3000",
     "types": "tsc --noEmit",
     "verify": "pnpm lint && pnpm prettify && pnpm types && pnpm test && pnpm audit --prod && pnpm build",
     "gitleaks": "sh scripts/gitleaks.sh"
@@ -50,11 +51,8 @@
     "@types/node": "^25.0.8",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.23",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^13.0.1",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.4",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jest-dom": "^5.5.0",
@@ -64,26 +62,18 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-testing-library": "^7.15.4",
-    "html-webpack-plugin": "^5.6.5",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "jest-fixed-jsdom": "^0.0.11",
-    "mini-css-extract-plugin": "^2.9.4",
     "postcss": "^8.5.5",
-    "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^10.6.0",
     "prettier": "^3.8.0",
-    "style-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.3.16",
     "ts-jest": "^29.4.6",
-    "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.53.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.3"
+    "vite": "^6.0.7",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
