@@ -10,8 +10,9 @@ This is **electrocalc**, a React-based web application for calculating electrici
 
 ### Essential Commands
 
-- `pnpm start` - Start development server on port 3000
-- `pnpm build` - Production build using webpack
+- `pnpm dev` - Start Vite development server on port 3000
+- `pnpm build` - TypeScript check + Vite production build
+- `pnpm preview` - Preview production build locally on port 3000
 - `pnpm test` - Run Jest tests
 - `pnpm test <TEST_FILE_NAME>` - Run specific test file
 - `pnpm verify` - Complete verification pipeline (lint + prettify + types + test + audit + build)
@@ -36,7 +37,7 @@ This is **electrocalc**, a React-based web application for calculating electrici
 - **Styling**: Styled Components + Emotion
 - **Forms**: React Hook Form with Zod validation
 - **i18n**: react-i18next (English/Spanish support)
-- **Build**: Webpack 5 with custom configuration
+- **Build**: Vite with React plugin and TypeScript support
 - **Testing**: Jest + React Testing Library
 
 ### Project Structure
