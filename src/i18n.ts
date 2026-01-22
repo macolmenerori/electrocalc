@@ -16,9 +16,19 @@ const resources = {
   }
 };
 
-i18next.use(LanguageDetector).use(initReactI18next).init({
+// SSR guard: Only use LanguageDetector in browser
+const isBrowser = typeof window !== 'undefined';
+
+const i18nInstance = i18next.use(initReactI18next);
+
+if (isBrowser) {
+  i18nInstance.use(LanguageDetector);
+}
+
+i18nInstance.init({
   resources,
-  fallbackLng: 'en' // Default language english
+  fallbackLng: 'en', // Default language english
+  lng: isBrowser ? undefined : 'en' // Force English during SSR
 });
 
 export default i18next;

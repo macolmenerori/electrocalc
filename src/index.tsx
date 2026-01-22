@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
+
+import { ViteReactSSG } from 'vite-react-ssg/single-page';
 
 import './i18n';
 
@@ -7,9 +9,10 @@ import { App } from './App';
 
 import { LoadingSpinner } from '@/components/LoadingSpinner/LoadingSpinner';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
-  <Suspense fallback={<LoadingSpinner position="center" />}>
-    <App />
-  </Suspense>
+export const createRoot = ViteReactSSG(
+  <HelmetProvider>
+    <Suspense fallback={<LoadingSpinner position="center" />}>
+      <App />
+    </Suspense>
+  </HelmetProvider>
 );

@@ -50,6 +50,16 @@ export default defineConfig(({ mode }) => {
 
     optimizeDeps: {
       include: ['react', 'react-dom', '@mui/material']
+    },
+
+    // SSR configuration
+    ssr: {
+      noExternal: ['react-helmet-async']
+    },
+
+    // SSG options
+    ssgOptions: {
+      formatting: 'minify'
     }
   };
 });
