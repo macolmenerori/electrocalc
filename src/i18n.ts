@@ -28,7 +28,8 @@ if (isBrowser) {
 i18nInstance.init({
   resources,
   fallbackLng: 'en', // Default language english
-  lng: isBrowser ? undefined : 'en' // Force English during SSR
+  lng: isBrowser ? undefined : 'en', // Force English during SSR
+  showSupportNotice: false // Disable i18next support notice in console
 });
 
 export default i18next;
