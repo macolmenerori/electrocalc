@@ -24,7 +24,7 @@ RUN pnpm i --frozen-lockfile
 RUN pnpm build
 
 # Stage 2: serve project
-FROM nginx:stable-alpine
+FROM nginx:1.29.4-alpine3.23
 LABEL app="electrocalc" stack.binary="nginx" stack.version="stable-alpine"
 
 COPY --from=builder /usr/app/dist /usr/share/nginx/html
