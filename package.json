@@ -1,6 +1,6 @@
 {
   "name": "electrocalc",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Electricity consumption cost calculator",
   "engines": {
     "node": ">=24.0.0"
@@ -8,7 +8,7 @@
   "type": "module",
   "author": "macolmenerori",
   "license": "MIT",
-  "packageManager": "pnpm@10.30.1",
+  "packageManager": "pnpm@10.32.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/macolmenerori/electrocalc"
@@ -22,7 +22,8 @@
     "test": "jest",
     "types": "tsc --noEmit",
     "verify": "pnpm lint && pnpm prettify && pnpm types && pnpm test && pnpm audit --prod && pnpm build",
-    "gitleaks": "sh scripts/gitleaks.sh"
+    "gitleaks": "sh scripts/gitleaks.sh",
+    "release": "npx tsx scripts/release.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

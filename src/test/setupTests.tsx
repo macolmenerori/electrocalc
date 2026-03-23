@@ -35,7 +35,8 @@ i18n.use(initReactI18next).init({
     es: {
       translation: esTranslation
     }
-  }
+  },
+  showSupportNotice: false // Disable ads warning
 });
 
 // Mock HTMLFormElement.prototype.requestSubmit if not available
