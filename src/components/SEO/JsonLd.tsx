@@ -34,6 +34,7 @@ export const JsonLd: FC = () => {
     description: description,
     url: baseUrl,
     applicationCategory: 'UtilityApplication',
+    softwareVersion: __APP_VERSION__,
     browserRequirements: 'Requires JavaScript. Requires HTML5.',
     operatingSystem: 'All',
     offers: {
