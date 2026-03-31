@@ -1,48 +1,97 @@
-# Review: react-i18next v16.6.6 to v17.0.1 Upgrade (PR #288)
+# Review: i18next & react-i18next Upgrade (PRs #289 and #288)
 
-## Verdict: NOT safe to merge alone — merge PR #289 first
+---
 
-## Critical Issue: Peer Dependency Mismatch
+## Part 1: i18next v25.10.9 → v26.0.1 (PR #289)
 
-react-i18next v17.0.1 requires `i18next >= 26.0.1` as a peer dependency.
-The project currently uses `i18next@^25.10.9` (resolves to 25.10.9).
+### Verdict: Safe to merge with one minor cleanup
 
-**Action required:** Merge PR #289 (i18next 25.10.9 -> 26.0.1) **before** merging PR #288.
+### Breaking Changes in i18next v26.0.0
 
-## Breaking Change Analysis
+| Breaking Change | Used in Project? | Impact |
+|---|---|---|
+| `showSupportNotice` option removed | **YES** | **Code change needed** (see below) |
+| `interpolation.format` function removed | No | None |
+| `initImmediate` option removed (use `initAsync`) | No | None |
+| `simplifyPluralSuffix` option removed | No | None |
+| `@babel/polyfill` removed from devDeps | No | None |
 
-### `transKeepBasicHtmlNodesFor` in `Trans` component (v17.0.0) — NO IMPACT
+### Required Code Change: Remove `showSupportNotice`
 
-The only breaking change in v17.0.0 fixes how HTML tag names are preserved when children
-contain interpolations or mixed content in the `Trans` component.
+The `showSupportNotice` option was removed in v26.0.0 (the console notice itself was removed).
+This option must be deleted from two files to avoid TypeScript errors on unknown properties:
 
-This project does **not** use the `Trans` component anywhere. All i18n usage is via:
-- `useTranslation()` hook (in 8 components)
-- `I18nextProvider` (in test setup)
-- `initReactI18next` plugin
+**File 1: `src/i18n.ts` (line 32)**
+```diff
+ i18nInstance.init({
+   resources,
+   fallbackLng: 'en',
+-  lng: isBrowser ? undefined : 'en', // Force English during SSR
+-  showSupportNotice: false // Disable i18next support notice in console
++  lng: isBrowser ? undefined : 'en' // Force English during SSR
+ });
+```
 
-**No code changes needed.**
+**File 2: `src/test/setupTests.tsx` (line 39)**
+```diff
+ i18n.use(initReactI18next).init({
+   lng: 'en',
+   fallbackLng: 'en',
+   debug: false,
+   interpolation: {
+     escapeValue: false
+   },
+   resources: {
+     en: { translation: enTranslation },
+     es: { translation: esTranslation }
+-  },
+-  showSupportNotice: false // Disable ads warning
++  }
+ });
+```
 
-### Deprecated `interpolation.format` removed in i18next v26 — NO IMPACT
+### Not Affected (verified)
 
-react-i18next v17.0.1 migrated its own tests from `interpolation.format` to
-`i18n.services.formatter.add()`. This project does not use `interpolation.format`
-(only `interpolation.escapeValue` in test setup, which is unrelated and still supported).
+- No `interpolation.format` usage anywhere
+- No `initImmediate` usage (project uses synchronous `init()`)
+- No plural suffixes in translation files (no `_one`, `_other`, etc.)
+- Translation JSON files are simple key-value strings — fully compatible
+- `useTranslation()`, `I18nextProvider`, `initReactI18next`, `LanguageDetector` APIs unchanged
 
-**No code changes needed.**
+---
+
+## Part 2: react-i18next v16.6.6 → v17.0.1 (PR #288)
+
+### Verdict: Safe to merge after PR #289
+
+### Peer Dependency Requirement
+
+react-i18next v17.0.1 requires `i18next >= 26.0.1`.
+**PR #289 must be merged first** to satisfy this.
+
+### Breaking Changes in react-i18next v17.0.0
+
+| Breaking Change | Used in Project? | Impact |
+|---|---|---|
+| `transKeepBasicHtmlNodesFor` fix in `Trans` component | No (`Trans` not used) | None |
+
+**No code changes needed for react-i18next v17.**
+
+---
 
 ## Merge Order
 
-1. Merge **PR #289** first (i18next 25.10.9 -> 26.0.1)
-2. Then merge **PR #288** (react-i18next 16.6.6 -> 17.0.1)
-3. Run `pnpm verify` after both are merged to confirm everything passes
+1. Merge **PR #289** (i18next 25.10.9 → 26.0.1)
+2. Remove `showSupportNotice: false` from `src/i18n.ts` and `src/test/setupTests.tsx`
+3. Merge **PR #288** (react-i18next 16.6.6 → 17.0.1)
+4. Run `pnpm verify` to confirm everything passes
 
-## Files Using react-i18next (checked for compatibility)
+## Files Using i18next/react-i18next (checked for compatibility)
 
 | File | Usage | Impact |
 |------|-------|--------|
-| `src/i18n.ts` | `initReactI18next` plugin | None |
-| `src/test/setupTests.tsx` | `initReactI18next`, `I18nextProvider` | None |
+| `src/i18n.ts` | `i18next.init()`, `initReactI18next`, `LanguageDetector` | Remove `showSupportNotice` |
+| `src/test/setupTests.tsx` | `i18n.init()`, `initReactI18next`, `I18nextProvider` | Remove `showSupportNotice` |
 | `src/components/InputComponent/InputComponent.tsx` | `useTranslation` | None |
 | `src/components/SEO/JsonLd.tsx` | `useTranslation` | None |
 | `src/components/SEO/SEOHead.tsx` | `useTranslation` | None |
@@ -51,8 +100,3 @@ react-i18next v17.0.1 migrated its own tests from `interpolation.format` to
 | `src/components/HeaderComponent/HeaderComponent.tsx` | `useTranslation` | None |
 | `src/components/ResultComponent/ResultComponent.tsx` | `useTranslation` | None |
 | `src/components/LanguageSwitcher/LanguageSwitcher.tsx` | `useTranslation` | None |
-
-## No Code Changes Required
-
-The project's usage of react-i18next is fully compatible with v17.0.1.
-The only action needed is ensuring the correct merge order for the two Dependabot PRs.
