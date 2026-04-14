@@ -47,17 +47,14 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
 
   return (
     <Box
-      gap={3}
       component="form"
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
+      sx={{ gap: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       onSubmit={handleSubmit(onSubmit)}
     >
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
         <Stack direction="column">
           <InputLabel htmlFor="power-input" sx={{ paddingLeft: 1 }}>
-            <Typography variant="body1" color="text.tertiary">
+            <Typography variant="body1" sx={{ color: 'text.tertiary' }}>
               {t('components.inputComponent.labelPower')}
             </Typography>
           </InputLabel>
@@ -76,7 +73,7 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
                 error={!!errors.power}
                 endAdornment={
                   <InputAdornment position="end">
-                    <Typography variant="body1" color="text.tertiary">
+                    <Typography variant="body1" sx={{ color: 'text.tertiary' }}>
                       W
                     </Typography>
                   </InputAdornment>
@@ -89,7 +86,7 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
         </Stack>
         <Stack direction="column">
           <InputLabel htmlFor="price-input" sx={{ paddingLeft: 1 }}>
-            <Typography variant="body1" color="text.tertiary">
+            <Typography variant="body1" sx={{ color: 'text.tertiary' }}>
               {t('components.inputComponent.labelPrice')}
             </Typography>
           </InputLabel>
@@ -108,7 +105,7 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
                 error={!!errors.price}
                 endAdornment={
                   <InputAdornment position="end">
-                    <Typography variant="body1" color="text.tertiary">
+                    <Typography variant="body1" sx={{ color: 'text.tertiary' }}>
                       €/kWh
                     </Typography>
                   </InputAdornment>
@@ -126,7 +123,7 @@ export function InputComponent({ setHourlyResult }: InputComponentProps) {
         disabled={isSubmitting}
         sx={{ backgroundColor: 'background.paper' }}
       >
-        <Typography textTransform="uppercase">
+        <Typography sx={{ textTransform: 'uppercase' }}>
           {t('components.inputComponent.calculate')}
         </Typography>
       </Button>

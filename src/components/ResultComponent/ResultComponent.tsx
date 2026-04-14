@@ -22,7 +22,7 @@ export function ResultComponent({ hourlyResult }: InputComponentProps) {
   const { t } = useTranslation();
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <TableContainer component={Paper} sx={{ maxWidth: TABLE_WIDTH }}>
         <Table
           sx={{ maxWidth: TABLE_WIDTH }}
