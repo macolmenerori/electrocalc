@@ -17,7 +17,7 @@ export default function FooterComponent() {
         marginTop: 2
       }}
     >
-      <Stack direction="row" spacing={1} alignItems="center">
+      <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
         <CopyrightIcon fontSize="small" />
         <Typography>
           <Link href="https://github.com/macolmenerori" target="_blank" rel="noopener">
