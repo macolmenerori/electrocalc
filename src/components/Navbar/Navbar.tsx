@@ -1,5 +1,8 @@
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
-import { AppBar, Box, Stack, Typography } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 import { LanguageSwitcher } from '@/components/LanguageSwitcher/LanguageSwitcher';
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
