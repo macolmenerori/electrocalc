@@ -1,4 +1,4 @@
-import { CssBaseline } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import { JsonLd, SEOHead } from '@/components/SEO';
 import { MainLayout } from '@/ui/MainLayout/MainLayout';

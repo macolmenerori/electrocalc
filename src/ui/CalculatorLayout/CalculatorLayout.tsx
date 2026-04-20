@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import { Container, Stack } from '@mui/material';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 
 import { InputComponent } from '@/components/InputComponent/InputComponent';
 import { ResultComponent } from '@/components/ResultComponent/ResultComponent';
