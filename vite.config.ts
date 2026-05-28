@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => {
     publicDir: 'public',
 
     optimizeDeps: {
-      include: ['react', 'react-dom', '@mui/material']
+      include: ['react', 'react-dom', '@mui/material', 'react-cookie-consent']
     },
 
     define: {
@@ -59,7 +59,7 @@ export default defineConfig(({ mode }) => {
 
     // SSR configuration
     ssr: {
-      noExternal: ['react-helmet-async']
+      noExternal: ['react-helmet-async', 'react-cookie-consent']
     },
 
     // SSG options

@@ -1,5 +1,10 @@
 {
   "components": {
+    "cookieConsent": {
+      "accept": "Aceptar",
+      "decline": "Rechazar",
+      "message": "Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al hacer clic en 'Aceptar', das tu consentimiento para el uso de cookies. Puedes rechazar haciendo clic en 'Rechazar'."
+    },
     "footer": {
       "gitHubProject": "Echa un ojo a este proyecto en GitHub"
     },
