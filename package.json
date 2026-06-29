@@ -8,7 +8,7 @@
   "type": "module",
   "author": "macolmenerori",
   "license": "MIT",
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@11.9.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/macolmenerori/electrocalc"
@@ -32,7 +32,7 @@
     "@hookform/resolvers": "^5.4.0",
     "@mui/icons-material": "^9.1.1",
     "@mui/material": "^9.1.2",
-    "i18next": "^26.3.1",
+    "i18next": "^26.3.3",
     "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.2.7",
     "react-cookie-consent": "^10.0.1",
