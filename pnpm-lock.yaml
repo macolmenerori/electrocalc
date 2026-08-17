@@ -41,8 +41,8 @@ importers:
         specifier: ^19.2.8
         version: 19.2.8
       react-cookie-consent:
-        specifier: ^10.0.1
-        version: 10.0.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^10.0.2
+        version: 10.0.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       react-dom:
         specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
@@ -3083,9 +3083,8 @@ packages:
       node-notifier:
         optional: true
 
-  js-cookie@3.0.7:
-    resolution: {integrity: sha512-z/wZZgDrkNV1eA0ULjM/F9/50Ya8fbzgKneSpoPsXSGd0KnpdtHfOZWK+GcwLk+EZbS4F9RBhU+K2RgzuDaItw==}
-    engines: {node: '>=20'}
+  js-cookie@3.0.8:
+    resolution: {integrity: sha512-yeJd4aNAdYZQjaon2bpD/Gb0B/omw7HQOsynXXcOiWVCacbBcPlgn8S/d1X6blFSaHao7ozqtW7NZW19xpCtIw==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3696,8 +3695,8 @@ packages:
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
 
-  react-cookie-consent@10.0.1:
-    resolution: {integrity: sha512-qgU7Kr+x9/feKZxaIJbMT+R/xD1lnAQy9MzD4yLooVrkhoUR7XFc8Xv8M+GDQYcjoYh6uszslLGo1k+eU2VLtw==}
+  react-cookie-consent@10.0.2:
+    resolution: {integrity: sha512-YNmtbRHVmSxXnPjKadXyKP60UN/2UF6gvAlmzQLyQX13kGr2j+FmIFEnlx58yQeRYkAW/DNod23sz0c17gpPFw==}
     engines: {node: '>=20.16'}
     peerDependencies:
       react: '>=18'
@@ -7479,7 +7478,7 @@ snapshots:
       jest-regex-util: 30.4.0
       jest-util: 30.4.1
       jest-worker: 30.4.1
-      picomatch: 4.0.4
+      picomatch: 4.0.5
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.3
@@ -7662,7 +7661,7 @@ snapshots:
       chalk: 4.1.2
       ci-info: 4.4.0
       graceful-fs: 4.2.11
-      picomatch: 4.0.4
+      picomatch: 4.0.5
 
   jest-validate@30.4.1:
     dependencies:
@@ -7705,7 +7704,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  js-cookie@3.0.7: {}
+  js-cookie@3.0.8: {}
 
   js-tokens@4.0.0: {}
 
@@ -8358,9 +8357,9 @@ snapshots:
 
   querystringify@2.2.0: {}
 
-  react-cookie-consent@10.0.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-cookie-consent@10.0.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
-      js-cookie: 3.0.7
+      js-cookie: 3.0.8
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
 
