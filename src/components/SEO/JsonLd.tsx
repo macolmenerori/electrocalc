@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export const JsonLd: FC = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || 'en';
-  const baseUrl = 'https://electrocalc.miguelangelcolmenero.es';
+  const baseUrl = 'https://electrocalc.miguelcolmenero.net';
 
   const title = t('title');
   const description = t('description');

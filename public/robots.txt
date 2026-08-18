@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://electrocalc.miguelangelcolmenero.es/sitemap.xml
+Sitemap: https://electrocalc.miguelcolmenero.net/sitemap.xml

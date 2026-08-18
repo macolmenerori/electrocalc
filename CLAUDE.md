@@ -101,7 +101,7 @@ This project uses **vite-react-ssg** for static site generation (SSG) to improve
   - `SEOHead.tsx` - Dynamic meta tags (Open Graph, Twitter Cards, canonical, hreflang)
   - `JsonLd.tsx` - Structured data (WebSite, WebApplication, BreadcrumbList schemas)
 - **Sitemap**: Auto-generated before each build via `scripts/generate-sitemap.ts`
-- **Production URL**: `https://electrocalc.miguelangelcolmenero.es`
+- **Production URL**: `https://electrocalc.miguelcolmenero.net`
 
 ### SSR Guards - CRITICAL
 
@@ -115,10 +115,12 @@ if (typeof window !== 'undefined') {
 ```
 
 **Files with SSR guards:**
+
 - `src/i18n.ts` - Guards for LanguageDetector (uses localStorage/navigator)
 - `src/ui/theme/ThemeContext.tsx` - Guards for localStorage and window.matchMedia
 
 **Common browser APIs that need guards:**
+
 - `localStorage` / `sessionStorage`
 - `window.matchMedia()`
 - `navigator` object
