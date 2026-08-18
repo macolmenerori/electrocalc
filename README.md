@@ -2,7 +2,7 @@
 
 This is a web application for calculating electricity costs.
 
-Try it out [here](https://electrocalc.miguelangelcolmenero.es/)
+Try it out [here](https://electrocalc.miguelcolmenero.net/)
 
 ## How to use
 

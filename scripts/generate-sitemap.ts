@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const baseUrl = 'https://electrocalc.miguelangelcolmenero.es';
+const baseUrl = 'https://electrocalc.miguelcolmenero.net';
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
