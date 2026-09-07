@@ -39,7 +39,7 @@
     "react-dom": "^19.2.8",
     "react-helmet-async": "3.0.0",
     "react-hook-form": "^7.87.0",
-    "react-i18next": "^17.0.12",
+    "react-i18next": "^17.0.13",
     "zod": "^4.5.4"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^26.4.0",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.5",
+    "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.0.5",
     "autoprefixer": "^10.5.4",
     "eslint": "^9.39.2",
