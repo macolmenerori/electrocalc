@@ -135,8 +135,8 @@ importers:
         specifier: ^8.5.28
         version: 8.5.28
       postcss-preset-env:
-        specifier: ^11.5.2
-        version: 11.5.2(postcss@8.5.28)
+        specifier: ^11.5.3
+        version: 11.5.3(postcss@8.5.28)
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
@@ -656,8 +656,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@csstools/postcss-media-minmax@3.0.4':
-    resolution: {integrity: sha512-f3V1TsBXGR/TamldN75OMKSVKxvlqvEatn2ipiir/4KTNpB4x5+AsYc3OTtpH6nJQOEHP9n+d3y0k78MRt+SLQ==}
+  '@csstools/postcss-media-minmax@3.0.5':
+    resolution: {integrity: sha512-Wwjhopy23N9lGrZ8FbKXJVbfMxldVcKeQRjScFTEnGfKaFfFVZFwqUz8l6NluuS03ZrNMVB+JZjBcVCZ+6uiIg==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
@@ -3791,8 +3791,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-preset-env@11.5.2:
-    resolution: {integrity: sha512-cxv5yCikgSUKcUyRQcuhqVJT6uxCSwvJdOGz8XUR4kHeY2WWCU7UL0uTo7cpuZ2y1BF5x4FoGOEZE5vR6P8xrg==}
+  postcss-preset-env@11.5.3:
+    resolution: {integrity: sha512-aiPgwezqC7jQvtfajzDQc+u7v99wsB+D3m947AZsKG8dTQrfX4Xrs2Xk9mLGUtnQYO3L85MqwW40iHcNiuoCXQ==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       postcss: ^8.4
@@ -5122,7 +5122,7 @@ snapshots:
       '@csstools/utilities': 3.0.0(postcss@8.5.28)
       postcss: 8.5.28
 
-  '@csstools/postcss-media-minmax@3.0.4(postcss@8.5.28)':
+  '@csstools/postcss-media-minmax@3.0.5(postcss@8.5.28)':
     dependencies:
       '@csstools/css-calc': 3.4.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
@@ -8566,7 +8566,7 @@ snapshots:
       postcss: 8.5.28
       postcss-value-parser: 4.2.0
 
-  postcss-preset-env@11.5.2(postcss@8.5.28):
+  postcss-preset-env@11.5.3(postcss@8.5.28):
     dependencies:
       '@csstools/postcss-alpha-function': 2.0.13(postcss@8.5.28)
       '@csstools/postcss-cascade-layers': 6.0.0(postcss@8.5.28)
@@ -8594,7 +8594,7 @@ snapshots:
       '@csstools/postcss-logical-overscroll-behavior': 3.0.0(postcss@8.5.28)
       '@csstools/postcss-logical-resize': 4.0.0(postcss@8.5.28)
       '@csstools/postcss-logical-viewport-units': 4.0.1(postcss@8.5.28)
-      '@csstools/postcss-media-minmax': 3.0.4(postcss@8.5.28)
+      '@csstools/postcss-media-minmax': 3.0.5(postcss@8.5.28)
       '@csstools/postcss-media-queries-aspect-ratio-number-values': 4.0.0(postcss@8.5.28)
       '@csstools/postcss-mixins': 1.0.0(postcss@8.5.28)
       '@csstools/postcss-nested-calc': 5.0.1(postcss@8.5.28)
