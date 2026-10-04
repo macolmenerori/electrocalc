@@ -2,7 +2,3 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: true
   unrs-resolver: true
-overrides:
-  minimatch: 10.2.5
-  flatted: 3.4.2
-  esbuild: '0.28.1'
