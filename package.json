@@ -70,7 +70,7 @@
     "postcss": "^8.5.31",
     "postcss-preset-env": "^11.6.1",
     "prettier": "^3.9.10",
-    "ts-jest": "^29.4.14",
+    "ts-jest": "^29.4.15",
     "ts-node": "^10.9.2",
     "tsx": "4.23.15",
     "typescript": "^6.0.3",
